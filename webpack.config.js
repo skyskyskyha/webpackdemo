@@ -2,7 +2,7 @@ const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 module.exports = {
-    mode: "development",
+    mode: "production",
     entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -22,7 +22,8 @@ module.exports = {
                                         "@babel/preset-env",
                                         {
                                             targets:{
-                                                "chrome": "88"
+                                                "chrome": "88",
+                                                "ie": "11"
                                             },
                                             "corejs":"3",
                                             "useBuiltIns": "usage"
